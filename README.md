@@ -2,7 +2,7 @@
 ## I will code for at least an hour a day for the next 100 days.[common on!!!]
 
 #### First day:2018-01-20
-######  sort()
+####  sort()
 The sort() method sorts the elements of an array in place and returns the array. The sort is not necessarily stable. The default sort order is according to string Unicode code points.
 ###### more details:
 ```html 
@@ -15,7 +15,9 @@ array.sort(function(a, b) {
   return a - b;
 });
 ```
-###### this is my practice about this function in the freecodecamp.org
+###### this is my practise about this function in the freecodecamp.org
 ```html
 https:www.freecodecamp.org/challenges/where-do-i-belong
 ```
+#### filter()
+
