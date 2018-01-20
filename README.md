@@ -1,4 +1,4 @@
-# 100-days-of-code
+# 100-days-of-code-study
 ## I will code for at least an hour a day for the next 100 days.[common on!!!]
 
 #### First day:2018-01-20
