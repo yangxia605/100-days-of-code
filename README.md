@@ -20,4 +20,12 @@ array.sort(function(a, b) {
 https:www.freecodecamp.org/challenges/where-do-i-belong
 ```
 #### filter()
-
+The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+###### more details:
+```html 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+```
+###### this is my practise about this function in the freecodecamp.org
+```html
+https://www.freecodecamp.org/challenges/falsy-bouncer
+```
