@@ -45,7 +45,17 @@ https://www.udemy.com/es6-javascript-reloaded/learn/v4/t/lecture/8504648?start=0
 a // ReferenceError: a is not defined.
 b // 1
 ```
+#### let 不存在变量提升
+```js
+// var 的情况
+console.log(foo); // 输出undefined
+var foo = 2;
 
+// let 的情况
+console.log(bar); // 报错ReferenceError
+let bar = 2;
+```
+#### const声明一个只读的常量。一旦声明，常量的值就不能改变。
 #### Default Parameters
 
 
