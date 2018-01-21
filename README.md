@@ -31,9 +31,10 @@ https://www.freecodecamp.org/challenges/falsy-bouncer
 ```
 ____________________________________________________________________
 #### Day 2:2018-01-21
-#### learn ES6 in the udemy.com
+#### learn ES6 in the udemy.com and yuanyifeng's blog
 ```html
 https://www.udemy.com/es6-javascript-reloaded/learn/v4/t/lecture/8504648?start=0
+http://es6.ruanyifeng.com/#docs/
 ```
 #### let 和 const 命令
 #### let 命令在代码块内有效
@@ -56,6 +57,17 @@ console.log(bar); // 报错ReferenceError
 let bar = 2;
 ```
 #### const声明一个只读的常量。一旦声明，常量的值就不能改变。
+###### const实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指针，const只能保证这个指针是固定的，至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。
+```js
+const foo = {};
+
+// 为 foo 添加一个属性，可以成功
+foo.prop = 123;
+foo.prop // 123
+
+// 将 foo 指向另一个对象，就会报错
+foo = {}; // TypeError: "foo" is read-only
+```
 #### Default Parameters
 
 
