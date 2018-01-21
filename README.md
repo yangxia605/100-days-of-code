@@ -42,6 +42,8 @@ https://www.udemy.com/es6-javascript-reloaded/learn/v4/t/lecture/8504648?start=0
   let a = 10;
   var b = 1;
 }
+a // ReferenceError: a is not defined.
+b // 1
 ```
 
 #### Default Parameters
