@@ -102,4 +102,4 @@ newArr = arr1.concat(arr2).filter(function(v, i, arr) {
    return newArr;
 }
 ```
-the amount of code is less,but I found the Algorithm Complexity is :(n + n) * (n + n),whice is more bad than last answer.So I will continue to look for solutions.
+the amount of code is less,but I found the Algorithm Complexity is :(n + n) * (n + n),which is more bad than last answer.So I will continue to look for solutions.
