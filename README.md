@@ -30,7 +30,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 https://www.freecodecamp.org/challenges/falsy-bouncer
 ```
 ____________________________________________________________________
-#### Day 2:2018-01-21
+#### Days 2:2018-01-21
 #### learn ES6 in the udemy.com and yuanyifeng's blog
 ```html
 https://www.udemy.com/es6-javascript-reloaded/learn/v4/t/lecture/8504648?start=0
@@ -69,6 +69,42 @@ foo.prop // 123
 foo = {}; // TypeError: "foo" is read-only
 ```
 #### Default Parameters
+解构复制允许指定默认值
+_______________________________________________________________________________________________________________________
 
+#### Days 3:
+###### Diff Two Arrays:learn to find a better way to improve that 算法（Algorithm） problem。
+First of my mind :
+```js
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  // Same, same; but different.
+  arr1.filter(function(item){
+    return arr2.indexOf(item) === -1 ? newArr.push(item) : "";
+  });
+  arr2.filter(function(item){
+    return arr1.indexOf(item) === -1 ? newArr.push(item) : "";
+  });
+  return newArr;
+}
+```
+// 有数组 A，B 
+// 假设A的长度是 a
+// 假设B的长度是 b
+// 遍历a,需要执行：a次
+// 对A的每一个数字，需要遍历B看 B中是否存在这个数，比较的次数为 b
+// 复杂度 a * b
+// 对B 同理有： b * a
+// 目前的算法总共的遍历次数是 2 * a * b
 
-
+*****then I improved it
+```js
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  // Same, same; but different.
+newArr = arr1.concat(arr2).filter(function(v, i, arr) {
+  return arr.indexOf(v) == arr.lastIndexOf(v);
+});
+   return newArr;
+}
+```
