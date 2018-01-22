@@ -88,7 +88,8 @@ function diffArray(arr1, arr2) {
   return newArr;
 }
 ```
- ###### 相关算法知识：有数组 A，B 假设A的长度是 a假设B的长度是 b遍历a,需要执行：a次对A的每一个数字，需要遍历B看 B中是否存在这个数，比较的次数为 b复杂度 a * b 对B 同理有： b * a目前的算法总共的遍历次数是 2 * a * b
+ ###### 相关算法知识：算法复杂度：2* n* n
+
 
 *****then I improved it
 ```js
@@ -101,3 +102,4 @@ newArr = arr1.concat(arr2).filter(function(v, i, arr) {
    return newArr;
 }
 ```
+the amount of code is less,but I found the Algorithm Complexity is :(n + n) * (n + n).So I will continue to look for solutions.
