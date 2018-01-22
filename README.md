@@ -72,7 +72,7 @@ foo = {}; // TypeError: "foo" is read-only
 解构复制允许指定默认值
 _______________________________________________________________________________________________________________________
 
-#### Days 3:
+#### Days 3: 2018-01-22
 ###### Diff Two Arrays:learn to find a better way to improve that 算法（Algorithm） problem。
 First of my mind :
 ```js
