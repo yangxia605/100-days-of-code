@@ -210,3 +210,15 @@ If instead you want to store the values of voxel.x into a, voxel.y into b, and v
 ```js
 const { x : a, y : b, z : c } = voxel // a = 3.6, b = 7.4, c = 6.54
 ```
+#### sass(Syntactically Awesome StyleSheets)
+#### Store Data with Sass Variables
+```js
+$main-fonts: Arial, sans-serif;
+$headings-color: green;
+
+//To use variables:
+h1 {
+  font-family: $main-fonts;
+  color: $headings-color;
+}
+```
