@@ -202,7 +202,7 @@ var y = voxel.y; // y = 7.4
 var z = voxel.z; // z = 6.54
 ```
 
+###### ES6 destructuring syntax:
 ```js
-Here's the same assignment statement with ES6 destructuring syntax:
 const { x, y, z } = voxel; // x = 3.6, y = 7.4, z = 6.54
 ```
