@@ -43,6 +43,8 @@ http://es6.ruanyifeng.com/#docs/
   let a = 10;
   var b = 1;
 }
+a // ReferenceError: a is not defined.
+b // 1
 function checkScope() {
 "use strict";
   let i = "function scope";
@@ -53,9 +55,6 @@ function checkScope() {
   console.log("Function scope i is: ", i);
   return i;
 }
-
-a // ReferenceError: a is not defined.
-b // 1
 ```
 #### let 不存在变量提升
 ```js
