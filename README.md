@@ -79,6 +79,7 @@ foo.prop // 123
 foo = {}; // TypeError: "foo" is read-only
 ```
 #### Default Parameters
+
 解构复制允许指定默认值
 _______________________________________________________________________________________________________________________
 
@@ -117,7 +118,7 @@ the amount of code is less,but I found the Algorithm Complexity is :(n + n) * (n
 _________________________________________________________________________________________________________________________
 
 #### Days 4: 2018-01-23
-###### Title Case a Sentence
+#### Title Case a Sentence
 ```js
 function titleCase(str) {
  var convertToArray = str.toLowerCase().split(" "); //split the str into an array
@@ -129,7 +130,7 @@ function titleCase(str) {
   return convertToArray.join(" ");
 }
 ```
-######  Mutate an Array Declared with const
+####  Mutate an Array Declared with const
 ```js
 "use strict";
 const s = [5, 6, 7];
@@ -137,7 +138,7 @@ s = [1, 2, 3]; // throws error, trying to assign a const
 s[2] = 45; // works just as it would with an array declared with var or let
 console.log(s); // returns [5, 6, 45]
 ```
-######  Prevent Object Mutation:Object.freeze
+####  Prevent Object Mutation:Object.freeze
 Once the object is freezed, you can no longer add/update/delete properties from it. Any attempt at changing the object will be rejected without any error.
 ```js
 let obj = {
@@ -150,12 +151,12 @@ obj.hobby = "Test"; // will be ignored. Mutation not allowed
 console.log(obj); 
 // { name: "mianmian", review:"coding"}
 ```
-######  Use Arrow Functions to Write Concise Anonymous Functions
+####  Use Arrow Functions to Write Concise Anonymous Functions
 ```js
 const magic = () => new Date();
 const myConcat = (arr1, arr2) => arr1.concat(arr2);
 ```
-######  Write Higher Order Arrow Functions
+####  Write Higher Order Arrow Functions
 Use arrow function syntax to compute the square of only the positive integers (fractions are not integers) in the array realNumberArray and store the new array in the variable squaredIntegers.
 ```js
 const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34];
@@ -169,4 +170,39 @@ const squareList = (arr) => {
 };
 // test your code
 const squaredIntegers = squareList(realNumberArray);
+```
+#### Use the Rest Operator with Function Parameters
+```js
+const sum = (function() {
+  "use strict";
+  return function sum(...args) {
+    return args.reduce((a, b) => a + b, 0);
+  };
+})();
+console.log(sum(1, 2, 3)); // 6
+```
+#### Use the Spread Operator to Evaluate Arrays In-Place
+###### The ES5 code below uses apply() to compute the maximum value in an array:
+```js
+var arr = [6,89,3,45];
+var maximus = Math.max.apply(null,arr);//returns 89
+```
+###### The spread operator makes this syntax much better to read and maintain.
+```js
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr); // returns 89
+```
+####  Use Destructuring Assignment to Assign Variables from Objects
+```js
+Consider the following ES5 code:
+
+var voxel = {x: 3.6, y: 7.4, z: 6.54 };
+var x = voxel.x; // x = 3.6
+var y = voxel.y; // y = 7.4
+var z = voxel.z; // z = 6.54
+```
+```js
+Here's the same assignment statement with ES6 destructuring syntax:
+
+const { x, y, z } = voxel; // x = 3.6, y = 7.4, z = 6.54
 ```
