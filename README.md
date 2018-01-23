@@ -129,3 +129,25 @@ function titleCase(str) {
   return convertToArray.join(" ");
 }
 ```
+######  Mutate an Array Declared with const
+```js
+"use strict";
+const s = [5, 6, 7];
+s = [1, 2, 3]; // throws error, trying to assign a const
+s[2] = 45; // works just as it would with an array declared with var or let
+console.log(s); // returns [5, 6, 45]
+```
+######  Prevent Object Mutation:Object.freeze
+Once the object is freezed, you can no longer add/update/delete properties from it. Any attempt at changing the object will be rejected without any error.
+```js
+let obj = {
+  name: "mianmian"
+  hobby:"coding"
+  };
+Object.freeze(obj);
+obj.hobby = "bad"; //will be ignored. Mutation not allowed
+obj.hobby = "Test"; // will be ignored. Mutation not allowed
+console.log(obj); 
+// { name: "mianmian", review:"coding"}
+```
+
