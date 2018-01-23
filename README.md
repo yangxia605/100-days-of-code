@@ -43,6 +43,17 @@ http://es6.ruanyifeng.com/#docs/
   let a = 10;
   var b = 1;
 }
+function checkScope() {
+"use strict";
+  let i = "function scope";
+  if (true) {
+    let i = "block scope";
+    console.log("Block scope i is: ", i);
+  }
+  console.log("Function scope i is: ", i);
+  return i;
+}
+
 a // ReferenceError: a is not defined.
 b // 1
 ```
