@@ -103,3 +103,19 @@ newArr = arr1.concat(arr2).filter(function(v, i, arr) {
 }
 ```
 the amount of code is less,but I found the Algorithm Complexity is :(n + n) * (n + n),which is more bad than last answer.So I will continue to look for solutions.
+
+_________________________________________________________________________________________________________________________
+
+#### Days 4: 2018-01-23
+###### Title Case a Sentence
+```js
+function titleCase(str) {
+ var convertToArray = str.toLowerCase().split(" "); //split the str into an array
+ for(var i = 0;i < convertToArray.length;i++){ 
+   var char = convertToArray[i].charAt(0); //find the first letter
+   convertToArray[i]=convertToArray[i].replace(char,function replace(char){ 
+     return char.toUpperCase(); }); //replace the first letter into UpperCase
+ }
+  return convertToArray.join(" ");
+}
+```
