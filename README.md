@@ -305,3 +305,17 @@ console.log(lol.writer);
 lol.writer = 'wut';
 console.log(lol.writer);
 ```
+#### Understand the Differences Between import and require
+```js
+import { countItems } from "math_array_functions"
+```
+###### Note
+The whitespace surrounding the function inside the curly braces is a best practice - it makes it easier to read the import statement.
+###### Note
+In most cases, the file path requires a ./ before it; otherwise, node will look in the node_modules directory first trying to load it as a dependencie.
+#### Use * to Import Everything from a File
+```js
+import * as myMathModule from "math_functions"
+myMathModule.add(2,3);
+myMathModule.subtract(5,3);
+```
