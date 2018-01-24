@@ -30,7 +30,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 https://www.freecodecamp.org/challenges/falsy-bouncer
 ```
 ____________________________________________________________________
-#### Days 2:2018-01-21
+#### Day 2:2018-01-21
 #### learn ES6 in the udemy.com and yuanyifeng's blog
 ```html
 https://www.udemy.com/es6-javascript-reloaded/learn/v4/t/lecture/8504648?start=0
@@ -83,7 +83,7 @@ foo = {}; // TypeError: "foo" is read-only
 解构复制允许指定默认值
 _______________________________________________________________________________________________________________________
 
-#### Days 3: 2018-01-22
+#### Day 3: 2018-01-22
 ###### Diff Two Arrays:learn to find a better way to improve that 算法（Algorithm） problem。
 First of my mind :
 ```js
@@ -117,7 +117,7 @@ the amount of code is less,but I found the Algorithm Complexity is :(n + n) * (n
 
 _________________________________________________________________________________________________________________________
 
-#### Days 4: 2018-01-23
+#### Day 4: 2018-01-23
 #### Title Case a Sentence
 ```js
 function titleCase(str) {
@@ -221,4 +221,30 @@ h1 {
   font-family: $main-fonts;
   color: $headings-color;
 }
+```
+____________________________________________________________________________________________________________________
+## Day 5:2018-01-24
+#### Use Destructuring Assignment with the Rest Operator to Reassign Array Elements
+```js
+before :
+Array.prototype.slice()
+now:
+const [a,b...arr]=[1,2,3,4,5];
+console.log(arr) //[3,4,5]
+```
+#### Use Destructuring Assignment to Pass an Object as a Function's Parameters
+```js
+const profileUpdate = (profileData) => {
+  const { name, age, nationality, location } = profileData;
+  // do something with these variables
+}
+```
+#### Create Strings using Template Literals
+```js
+const person = {
+  name: "Zodiac Hasbro",
+  age: 56
+};
+// string interpolation
+const greeting = `Hello, my name is ${person.name}!`
 ```
