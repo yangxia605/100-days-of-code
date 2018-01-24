@@ -285,3 +285,23 @@ class SpaceShuttle {
 const zeus = new spaceShuttle('Jupiter');
 ```
 ###### that the class keyword declares a new function, and a constructor was added, which would be invoked when new is called - to create a new object.
+#### Use getters and setters to Control Access to an Object
+```js
+class Book {
+  constructor(author) {
+    this._author = author;
+  }
+  // getter
+  get writer(){
+    return this._author;
+  }
+  // setter
+  set writer(updatedAuthor){
+    this._author = updatedAuthor;
+  }
+}
+const lol = new Book('anonymous');
+console.log(lol.writer);
+lol.writer = 'wut';
+console.log(lol.writer);
+```
