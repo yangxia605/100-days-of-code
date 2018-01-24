@@ -357,3 +357,57 @@ class ToDo extends React.Component {
   }
 };
 ```
+#### Use Default Props
+```js
+MyComponent.defaultProps = { location: 'San Francisco' }
+```
+#### Override Default Props
+####  Use PropTypes to Define the Props You Expect
+```js
+MyComponent.propTypes = {
+  handleclick: PropTypes.func.isRequired
+}
+```  
+#### Access Props Using this.props
+if an ES6 class component has a prop called data, you write {this.props.data} in JSX.
+#### Stateless Functional Components
+A stateless functional component is any function you write which accepts props and returns JSX. A stateless component, on the other hand, is a class that extends React.Component, but does not use internal state
+```js
+class CampSite extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <Camper name={"yangxia"}/>
+      </div>
+    );
+  }
+};
+// change code below this line
+class Camper extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render(){
+    return (
+    <div>
+        <p>{this.props.name}</p>
+        </div>
+    )
+  }
+}
+Camper.propTypes={
+  name : PropTypes.string.isRequired
+}
+Camper.defaultProps = { name: 'CamperBot' }
+```
+#### Create a Stateful Component
+```js
+//You create state in a React component by declaring a state property on the component class in its constructor. This //initializes the component with state when it is created. The state property must be set to a JavaScript object. Declaring //it looks like this:
+
+this.state = {
+  // describe your state here
+}
+```
