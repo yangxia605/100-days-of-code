@@ -248,3 +248,40 @@ const person = {
 // string interpolation
 const greeting = `Hello, my name is ${person.name}!`
 ```
+####  Write Concise Object Literal Declarations Using Simple Fields
+```js
+Before:
+const getMousePosition = (x, y) => ({
+  x: x,
+  y: y
+});
+Now:
+const getMousePosition = (x, y) => ({ x, y });
+```
+####  Write Concise Declarative Functions with ES6
+```js
+Before:
+const person = {
+  name: "Taylor",
+  sayHello: function() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+Now:
+const person = {
+  name: "Taylor",
+  sayHello() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+```
+#### Use class Syntax to Define a Constructor Function
+```js
+class SpaceShuttle {
+  constructor(targetPlanet){
+    this.targetPlanet = targetPlanet;
+  }
+}
+const zeus = new spaceShuttle('Jupiter');
+```
+###### that the class keyword declares a new function, and a constructor was added, which would be invoked when new is called - to create a new object.
