@@ -319,3 +319,14 @@ import * as myMathModule from "math_functions"
 myMathModule.add(2,3);
 myMathModule.subtract(5,3);
 ```
+## React
+#### Render a Class Component to the DOM
+ReactDOM.render(componentToRender, targetNode). The first argument is the React component that you want to render. The second argument is the DOM node that you want to render that component within.
+#### Pass Props to a Stateless Functional Component
+```js
+<App>
+  <Welcome user='Mark' />
+</App>
+
+const Welcome = (props) => <h1>Hello, {props.user}!</h1>
+```
