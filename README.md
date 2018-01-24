@@ -405,9 +405,46 @@ Camper.defaultProps = { name: 'CamperBot' }
 ```
 #### Create a Stateful Component
 ```js
-//You create state in a React component by declaring a state property on the component class in its constructor. This //initializes the component with state when it is created. The state property must be set to a JavaScript object. Declaring //it looks like this:
+//You create state in a React component by declaring a state property on the component class in its constructor. This initializes the component with state when it is created. The state property must be set to a JavaScript object. Declaring it looks like this:
 
 this.state = {
   // describe your state here
 }
 ```
+#### Set State with this.setState
+```js
+this.setState({
+ username: 'Lewis'
+});
+
+```
+#### Bind 'this' to a Class Method
+```js
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      itemCount: 0
+    };
+    // change code below this line
+this.addItem = this.addItem.bind(this)
+    // change code above this line
+  }
+  addItem() {
+    this.setState({
+      itemCount: this.state.itemCount + 1
+    });
+  }
+  render() {
+    return (
+      <div>
+        { /* change code below this line */ }
+        <button onClick = {this.addItem}>Click Me</button>
+        { /* change code above this line */ }
+        <h1>Current Item Count: {this.state.itemCount}</h1>
+      </div>
+    );
+  }
+};
+```
+  
