@@ -1,5 +1,5 @@
 # 100-days-of-code-study
-## I will code for at least an hour a day for the next 100 days.[common on!!!]
+## I will code for at least an hour a day for the next 100 days.[come on!!!]
 
 #### Day 1:2018-01-20
 ####  sort()
