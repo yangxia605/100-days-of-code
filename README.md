@@ -447,4 +447,12 @@ this.addItem = this.addItem.bind(this)
   }
 };
 ```
-  
+________________________________________________________________________________________________________________________
+## Day 6:2018-01-26
+#### learn the js library === lodash
+#### map an object
+```js
+_.forIn(new Foo, function(value, key) {
+  console.log(key);
+});
+```
