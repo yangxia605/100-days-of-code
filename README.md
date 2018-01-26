@@ -490,4 +490,13 @@ class TimerView extends React.Component {
 
 ReactDOM.render(<TimerView appState={appState} />, document.body);
 ```
+###### 3. Modify the State
+```js
+appState.resetTimer = action(function reset() {
+    appState.timer = 0;
+});
 
+setInterval(action(function tick() {
+    appState.timer += 1;
+}), 1000);
+```
