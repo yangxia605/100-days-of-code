@@ -447,7 +447,7 @@ this.addItem = this.addItem.bind(this)
   }
 };
 ```
-________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________
 ## Day 6:2018-01-26
 #### learn the js utility library === lodash
 #### A modern JavaScript utility library delivering modularity, performance & extras.
@@ -456,5 +456,38 @@ ________________________________________________________________________________
 _.forIn(new Foo, function(value, key) {
   console.log(key);
 });
+```
+## Mobx 
+Package with React component wrapper for combining React with MobX. Exports the observer decorator and some development utilities.
+```js
+import {observer} from 'mobx-react';//This package provides the bindings for MobX and React
+```
+#### The gist of MobX
+###### 1. Define your state and make it observable
+```js
+import {observable} from 'mobx';
+
+var appState = observable({
+    timer: 0
+});
+```
+###### 2. Create a view that responds to changes in the State
+```js
+import {observer} from 'mobx-react';
+
+@observer
+class TimerView extends React.Component {
+    render() {
+        return (<button onClick={this.onReset.bind(this)}>
+                Seconds passed: {this.props.appState.timer}
+            </button>);
+    }
+
+    onReset () {
+        this.props.appState.resetTimer();
+    }
+};
+
+ReactDOM.render(<TimerView appState={appState} />, document.body);
 ```
 
