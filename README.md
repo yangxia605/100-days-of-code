@@ -449,7 +449,8 @@ this.addItem = this.addItem.bind(this)
 ```
 ________________________________________________________________________________________________________________________
 ## Day 6:2018-01-26
-#### learn the js library === lodash
+#### learn the js utility library === lodash
+#### A modern JavaScript utility library delivering modularity, performance & extras.
 #### map an object
 ```js
 _.forIn(new Foo, function(value, key) {
