@@ -457,3 +457,4 @@ _.forIn(new Foo, function(value, key) {
   console.log(key);
 });
 ```
+
