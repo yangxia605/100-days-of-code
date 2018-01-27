@@ -523,6 +523,9 @@ Events => Actions => State => Computed values => Reactions
  @computed get completedTodos(){
     return this.todos.filter(
       todo => todo.done
- )
- }
+ ) }
+ ```
+ #### 4.Reactions are like computed values and react to state changes.But they produce a side effect instead of a value.like updating the UI
+ ```js
+ const Todos = observer({todos} => <ul> todos.map(todo => <TodoView .../> </ul>)
  ```
