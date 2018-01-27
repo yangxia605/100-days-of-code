@@ -502,5 +502,27 @@ setInterval(action(function tick() {
 ```
 ## Day 7:2018-01-27
 React and MobX together are a powerful combination. React renders the application state by providing mechanisms to translate it into a tree of renderable components. MobX provides the mechanism to store and update the application state that React then uses.
-
-
+```html
+Events => Actions => State => Computed values => Reactions
+```
+#### 1.Events invoke actions.Actions are the only thing that modify state and may have other side effects
+```js
+@actions onClick = () => {
+ this.props.todo.done = true;
+ }
+ ```
+ #### 2. State is observable and minimally defined.Should not contain redudant or derivable data.
+ ```js
+ @observable todos =[{
+ title:"learn Mobx",
+ done:false,
+ }]
+ ```
+ #### 3. Computed values are values that can be derived from the state using a pure function.
+ ```js
+ @computed get completedTodos(){
+    return this.todos.filter(
+      todo => todo.done
+ )
+ }
+ ```
