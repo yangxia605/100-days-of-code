@@ -500,6 +500,7 @@ setInterval(action(function tick() {
     appState.timer += 1;
 }), 1000);
 ```
+________________________________________________________________________________________________________________
 ## Day 7:2018-01-27
 React and MobX together are a powerful combination. React renders the application state by providing mechanisms to translate it into a tree of renderable components. MobX provides the mechanism to store and update the application state that React then uses.
 ```html
@@ -529,3 +530,44 @@ Events => Actions => State => Computed values => Reactions
  ```js
  const Todos = observer({todos} => <ul> todos.map(todo => <TodoView .../> </ul>)
  ```
+________________________________________________________________________________________________________________
+## Day 8:2018-01-28
+#### Provider and inject
+Provider is a component that can pass stores (or other stuff) using React's context mechanism to child components. This is useful if you have things that you don't want to pass through multiple layers of components explicitly.
+
+inject can be used to pick up those stores. It is a higher order component that takes a list of strings and makes those stores available to the wrapped component.
+```js
+@inject("color") @observer
+class Button extends React.Component {
+  render() {
+    return (
+      <button style={{background: this.props.color}}>
+        {this.props.children}
+      </button>
+    );
+  }
+}
+
+class Message extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.text} <Button>Delete</Button>
+      </div>
+    );
+  }
+}
+
+class MessageList extends React.Component {
+  render() {
+    const children = this.props.messages.map((message) =>
+      <Message text={message.text} />
+    );
+    return <Provider color="red">
+        <div>
+            {children}
+        </div>
+    </Provider>;
+  }
+}
+```
