@@ -621,5 +621,60 @@ class Controller extends React.Component {
   }
 };
 ```
-#### 
+#### shouldComponentUpdate()
+can call when child components receive new state or props, and declare specifically if the components should update or not
+and it takes nextProps and nextState as parameters.
+```js
+class OnlyEvens extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('Should I update?');
+     // change code below this line
+    console.log(nextProps)
+    var odd = (nextProps.value)%2;
+    console.log("odd"+odd);
+    if(!odd ){
+      return true;
+    } 
+     // change code above this line
+  }
+  componentWillReceiveProps(nextProps) {
+    console.log('Receiving new props...');
+  }
+  componentDidUpdate() {
+    console.log('Component re-rendered.');
+  }
+  render() {
+    return(  <div>
+      <h1>{this.props.value}</h1>
+    </div>) 
+  
+  }
+};
+
+class Controller extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 0
+    };
+    this.addValue = this.addValue.bind(this);
+  }
+  addValue() {
+    this.setState({
+      value: this.state.value + 1
+    });
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.addValue}>Add</button>
+        <OnlyEvens value={this.state.value}/>
+      </div>
+    );
+  }
+};
+```
  
