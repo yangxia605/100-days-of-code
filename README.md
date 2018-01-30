@@ -681,6 +681,7 @@ ________________________________________________________________________________
 ## Day 10: 2018-01-30
 #### React: Use Array.map() to Dynamically Render Elements
 https://beta.freecodecamp.org/en/challenges/react/use-arraymap-to-dynamically-render-elements
+>
 I'm confused about the "dynamically return an unordered list" and not solve the problem.But I have asked the forum for help.
 and I will keep track of this problem until solve it.
 the code like as below:
