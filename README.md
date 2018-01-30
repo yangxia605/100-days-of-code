@@ -677,4 +677,61 @@ class Controller extends React.Component {
   }
 };
 ```
- 
+_____________________________________________________________________________________________________________
+## Day 10: 2018-01-30
+#### React: Use Array.map() to Dynamically Render Elements
+https://beta.freecodecamp.org/en/challenges/react/use-arraymap-to-dynamically-render-elements
+I'm confused about the "dynamically return an unordered list" and not solve the problem.But I have asked the forum for help.
+and I will keep track of this problem until solve it.
+the code like as below:
+```js
+const textAreaStyles = {
+  width: 235,
+  margin: 5
+};
+
+class MyToDoList extends React.Component {
+  constructor(props) {
+    super(props);
+    // change code below this line
+this.state = {
+  userInput : '',
+  toDoList : []
+}
+    // change code above this line
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleSubmit() {
+    const itemsArray = this.state.userInput.split(',');
+    this.setState({
+      toDoList: itemsArray
+    });
+  }
+  handleChange(e) {
+    this.setState({
+      userInput: e.target.value
+    });
+  }
+  render() {
+    const items =  this.state.toDoList.map(function(item,index){
+      return <li key={index}> {item} </li>
+    })
+    return (
+      <div>
+        <textarea
+          onChange={this.handleChange}
+          value={this.state.userInput}
+          style={textAreaStyles}
+          placeholder="Separate Items With Commas" /><br />
+        <button onClick={this.handleSubmit}>Create List</button>
+        <h1>My "To Do" List:</h1>
+        <ul>
+          {items}
+        </ul>
+      </div>
+    );
+  }
+};
+```
+
