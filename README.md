@@ -715,7 +715,7 @@ this.state = {
     });
   }
   render() {
-    const items =  this.state.toDoList.map(function(item,index){
+    const items =this.state.toDoList.map(function(item,index){
       return <li key={index}> {item} </li>
     })
     return (
@@ -735,5 +735,26 @@ this.state = {
   }
 };
 ```
+___________________________________________________________________________________________________________________
+## Day 11: 2018-01-31 [REDUX]
 ## Redux: Create a Redux Store
+【ps】：yesterDay's question has been solved after my feedback.My code is not modified,but the case passed.
+```js
+const reducer = (state = 5) => {
+  return state;
+}
 
+// Redux methods are available from a Redux object
+// For example: Redux.createStore()
+// Define the store here:
+const store = Redux.createStore(reducer);
+```
+## Get State from the Redux Store
+```js
+const store = Redux.createStore(
+  (state = 5) => state
+);
+
+// change code below this line
+const currentState = store.getState();
+```
