@@ -758,3 +758,62 @@ const store = Redux.createStore(
 // change code below this line
 const currentState = store.getState();
 ```
+## Redux Action
+ Redux actions as messengers that deliver information about events happening in your app to the Redux store. The store then conducts the business of updating state based on the action that occurred.
+ ```js
+ const action = {
+  type:'LOGIN',
+}
+```
+## an Action Creator
+After creating an action, the next step is sending the action to the Redux store so it can update its state. In Redux, you define action creators to accomplish this. An action creator is simply a JavaScript function that returns an action. In other words, action creators create objects that represent action events.
+```js
+const action = {
+  type: 'LOGIN'
+}
+// Define an action creator here:
+function actionCreator(action) {
+  return action
+}
+```
+## Dispatch an Action Event
+```js
+const store = Redux.createStore(
+  (state = {login: false}) => state
+);
+
+const loginAction = () => {
+  return {
+    type: 'LOGIN'
+  }
+};
+
+// Dispatch the action here:
+store.dispatch(loginAction());
+```
+## Handle an Action in the Store
+After an action is created and dispatched, the Redux store needs to know how to respond to that action. This is the job of a reducer function.  A reducer takes state and action as arguments, and it always returns a new state.Another key principle in Redux is that state is read-only. In other words, the reducer function must always return a new copy of state and never modify state directly. 
+```js 
+const defaultState = {
+  login: false
+};
+
+const reducer = (state = defaultState, action) => {
+  // change code below this line
+if(action.type == 'LOGIN'){
+  return Object.assign({}, state, {
+      login: true
+      })
+}
+  return state
+  // change code above this line
+};
+
+const store = Redux.createStore(reducer);
+
+const loginAction = () => {
+  return {
+    type: 'LOGIN'
+  }
+};
+```
