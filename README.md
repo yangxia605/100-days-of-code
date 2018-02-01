@@ -818,7 +818,7 @@ const loginAction = () => {
 };
 ```
 _________________________________________________________________________________________________________
-## Day 11:2018-02-01
+## Day 12:2018-02-01
 ## Redux: Use a Switch Statement to Handle Multiple Actions
 ```js
 const defaultState = {
