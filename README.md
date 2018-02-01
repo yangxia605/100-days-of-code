@@ -817,4 +817,76 @@ const loginAction = () => {
   }
 };
 ```
-##  Write a Counter with Redux
+_________________________________________________________________________________________________________
+## Day 11:2018-02-01
+## Redux: Use a Switch Statement to Handle Multiple Actions
+```js
+const defaultState = {
+  authenticated: false
+};
+
+const authReducer = (state = defaultState, action) => {
+  // change code below this line
+switch (action.type){
+    case 'LOGIN':
+      return Object.assign({},state,{authenticated: true})
+    case 'LOGOUT':
+     return  Object.assign({},state,{authenticated: false})
+    default:
+      return state
+}
+  // change code above this line
+};
+
+const store = Redux.createStore(authReducer);
+
+const loginUser = () => {
+  return {
+    type: 'LOGIN'
+  }
+};
+
+const logoutUser = () => {
+  return {
+    type: 'LOGOUT'
+  }
+};
+```
+##  Combine Multiple Reducers [  all app state is held in a single state object in the store.  ]
+```js
+const rootReducer = Redux.combineReducers({
+  auth: authenticationReducer,
+  notes: notesReducer
+});
+```
+##  Send Action Data to the Store
+```js
+const ADD_NOTE = 'ADD_NOTE';
+
+const notesReducer = (state = 'Initial State', action) => {
+  switch(action.type) {
+    // change code below this line
+    case ADD_NOTE:
+      return action.text 
+    // change code above this line
+    default:
+      return state;
+  }
+};
+
+const addNoteText = (note) => {
+  // change code below this line
+return {
+  type: ADD_NOTE,
+  text: note
+}
+  // change code above this line
+};
+
+const store = Redux.createStore(notesReducer);
+
+console.log(store.getState());
+store.dispatch(addNoteText('Hello!'));
+console.log(store.getState());
+```
+##  Use Middleware to Handle Asynchronous Actions
