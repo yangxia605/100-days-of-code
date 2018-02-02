@@ -1168,3 +1168,5 @@ const connect = ReactRedux.connect;
 // change code below this line
 const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(Presentational)
 ```
+#### By contrast, container components are connected to Redux. 
+
