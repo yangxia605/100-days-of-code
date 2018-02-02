@@ -954,3 +954,49 @@ const addToDo = (todo) => {
 
 const store = Redux.createStore(immutableReducer);
 ```
+______________________________________________________________________________________________________
+## Day 13:2018-02-02
+## Getting Started with React Redux
+#### React is a view library that you provide with data, then it renders the view in an efficient, predictable way
+#### Redux is a state management framework that you can use to simplify the management of your application's state.
+## Manage State Locally First
+```js
+class DisplayMessages extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: '',
+      messages: []
+    }
+  }
+  // add handleChange() and submitMessage() methods here
+handleChange(e){
+  this.setState({
+    input:e.target.value
+  })
+}
+  submitMessage(){
+    const itemInput = this.state.input
+    this.setState({
+       messages: this.state.messages.concat(itemInput),
+        input: ''})
+  }
+  render() {
+    const items = this.state.messages.map((item,index) => {
+      return <li key={index}>{item}</li>
+    })
+    return (
+      <div>
+        <h2>Type in a new Message:</h2>
+        { /* render an input, button, and ul here */ }
+        <input value={this.state.input} onChange={(e)=> this.handleChange(e)}/>
+        <button onClick={() => this.submitMessage() }>Add message</button>
+        <ul>
+          {items}
+        </ul>
+        { /* change code above this line */ }
+      </div>
+    );
+  }
+};
+```
