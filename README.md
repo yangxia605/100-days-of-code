@@ -1110,32 +1110,22 @@ const mapStateToProps =(state) => {
 ##  Map Dispatch to Props
 ```js
 const addMessage = (message) => {
-2
   return {
-3
     type: 'ADD',
-4
     message: message
-5
   }
-6
 };
-7
-​
-8
+
 // change code below this line
-9
+
 const mapDispatchToProps =(dispatch) => {
-10
+
   return {
-11
+
     submitNewMessage: (message) => {
-12
+
       dispatch(addMessage(message))
-13
     }
-14
   }
-15
 }
 ```
