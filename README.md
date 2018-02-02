@@ -1095,3 +1095,47 @@ class AppWrapper extends React.Component {
   // change code above this line
 };
 ```
+##  Map State to Props
+#### The Provider component allows you to provide state and dispatch to your React components, but you must specify exactly what state and actions you want. This way, you make sure that each component only has access to the state it needs. You accomplish this by creating two functions: mapStateToProps() and mapDispatchToProps().In these functions, you declare what pieces of state you want to have access to and which action creators you need to be able to dispatch. Once these functions are in place, you'll see how to use the React Redux connect method to connect them to your components in another challenge.
+```js
+const state = [];
+
+// change code below this line
+const mapStateToProps =(state) => {
+  return {
+    messages: state
+  }
+}
+```
+##  Map Dispatch to Props
+```js
+const addMessage = (message) => {
+2
+  return {
+3
+    type: 'ADD',
+4
+    message: message
+5
+  }
+6
+};
+7
+​
+8
+// change code below this line
+9
+const mapDispatchToProps =(dispatch) => {
+10
+  return {
+11
+    submitNewMessage: (message) => {
+12
+      dispatch(addMessage(message))
+13
+    }
+14
+  }
+15
+}
+```
