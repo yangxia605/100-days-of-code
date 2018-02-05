@@ -1169,4 +1169,40 @@ const connect = ReactRedux.connect;
 const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(Presentational)
 ```
 #### By contrast, container components are connected to Redux. 
+________________________________________________________________________________________________________________
+## Day 16 2018-02-05
+## Converts a timestamp to a date format.
+```js
+var date = new Date(timestamp); //获取一个时间对象
+date.getFullYear();  // 获取完整的年份(4位,1970)
+date.getMonth();  // 获取月份(0-11,0代表1月,用的时候记得加上1)
+date.getDate();  // 获取日(1-31)
+date.getTime();  // 获取时间(从1970.1.1开始的毫秒数)
+date.getHours();  // 获取小时数(0-23)
+date.getMinutes();  // 获取分钟数(0-59)
+date.getSeconds();  // 获取秒数(0-59)
+```
+```js
+example:you want to have :yyyy-MM-dd hh:mm:ss
+var date = new Date(1398250549490);
+Y = date.getFullYear() + '-';
+M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+D = date.getDate() + ' ';
+h = date.getHours() + ':';
+m = date.getMinutes() + ':';
+s = date.getSeconds(); 
+console.log(Y+M+D+h+m+s);//2014-04-23 18:55:49
+```
+## Converts the date format to a timestamp.
+```js
+var strtime = '2014-04-23 18:55:49:123';
+var date = new Date(strtime); [or var date = new Date(strtime.replace(/-/g, '/'));]
+// 有三种方式获取，在后面会讲到三种方式的区别
+time1 = date.getTime();//精确到毫秒 1398250549123
+time2 = date.valueOf();//精确到毫秒 1398250549123
+time3 = Date.parse(date);//精确到秒，毫秒将用0来代替  1398250549000                         
+
+```
+## Moment.js 
+#### Parse, validate, manipulate, and display dates and times in JavaScript.
 
