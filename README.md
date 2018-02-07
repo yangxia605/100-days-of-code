@@ -1205,4 +1205,6 @@ time3 = Date.parse(date);//精确到秒，毫秒将用0来代替  1398250549000
 ```
 ## Moment.js 
 #### Parse, validate, manipulate, and display dates and times in JavaScript.
-
+__________________________________________________________________________________________________________________
+## DAY 17:2017-02-06 go through the jest+enzyme and learn the js design mordern
+## DAY 18:2017-02-01 finish setted up the jest_enzyme test framework into my react project
