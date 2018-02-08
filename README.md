@@ -1306,4 +1306,15 @@ strong {
  font-size: 1rem;
 }
 ```
-
+#### flex 垂直居中
+```js
+.vertical-container {
+  height: 300px;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+```
