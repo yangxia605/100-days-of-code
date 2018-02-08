@@ -1206,5 +1206,104 @@ time3 = Date.parse(date);//精确到秒，毫秒将用0来代替  1398250549000
 ## Moment.js 
 #### Parse, validate, manipulate, and display dates and times in JavaScript.
 __________________________________________________________________________________________________________________
-## DAY 17:2017-02-06 go through the jest+enzyme and learn the js design mordern
-## DAY 18:2017-02-01 finish set up the jest_enzyme test framework into my react project
+## DAY 17:2018-02-06 go through the jest+enzyme and learn the js design mordern
+## DAY 18:2018-02-07 finish set up the jest_enzyme test framework into my react project
+__________________________________________________________________________________________________________________
+## DAY 19:2018-02-08 
+## CSS Latout Centering Techniques
+#### Centering elements with CSS sometimes can be tricky. There are plenty of techniques that you could use but what technique you should use depends on the element and the content. Some questions that you might ask yourself when trying to center an element could be:
+###### 1.Is it an inline or a block element?
+###### 2.Is it just one line of text or multiple lines
+###### 3.Does it have a fixed width and height or its size is unknown?
+## Horizontal Centering(水平居中)
+#### Text-aglign
+#### In case you want to center an inline element you should apply it on its parent and not directly on that element:
+```js
+.parent { text-align: center; };
+<div class="parent">
+ <strong>I'm Centered</strong>
+</div>
+```
+#### In case we have an inline-block element we could make it full width and apply text-align: center; on it directly instead of it's parent.
+```js
+strong {
+ display: inline-block; 
+ width: 100%;
+ text-align: center;
+}
+```
+## Absolute Position
+```js
+.parent { position: relative; }
+.centered-element {
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+}
+```
+#### An alternative to that, -if you have elements of known width- would be to use a negative margin-left instead of translateX:
+```js
+.centered-element { 
+ position: absolute;
+ width: 600px;
+ left: 50%;
+ margin-left: -300px; // Shift it back by half of it's size.
+}
+```
+## Flex
+```js
+.parent { 
+ display: flex; 
+ justify-content: center;
+ height: 100vh;
+}
+```
+## Vertical Centering
+#### Absolute Position
+```js
+.parent { position: relative; }
+.centered-element {
+ position: absolute;
+ top: 50%;
+ transform: translateY(-50%);
+}
+```
+#### Table Cell
+```js
+.parent { 
+ display: table;
+ height: 100vh; 
+}
+
+.centered-element {
+ display: table-cell;
+ vertical-align: middle;
+}
+```
+#### Line-height
+```js
+.box { 
+ width: 600px;
+ height: 600px;
+ line-height: 600px;
+}
+<div class="box">
+ <strong>I'm Centered</strong>
+</div>
+```
+#### The Ghost Element
+```js
+.container { font-size: 0; }
+.container::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.container strong {
+ display: inline-block;
+ vertical-align: middle;
+ font-size: 1rem;
+}
+```
+
