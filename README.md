@@ -1319,15 +1319,29 @@ strong {
 }
 ```
 ______________________________________________________________________________________________________________________
-## [day 20]:]i learned how to use the css to draw triangle.semicircle.circle .and also study the BFC.
+#### [day 20]:]i learned how to use the css to draw triangle.semicircle.circle .and also study the BFC.
 ______________________________________________________________________________________________________________________
-## [day 21]:moved the original css part over the "beta freecodecamp" @freeCodeCamp 
+#### [day 21]:moved the original css part over the "beta freecodecamp" @freeCodeCamp 
 _____________________________________________________________________________________________________________________
-## [day 22]:Basic Algorithm has completed.
+#### [day 22]:Basic Algorithm has completed.
 _____________________________________________________________________________________________________________________
-## [day 23]: learnt the typescript.first.i learned the concepts of typescript.then i try to code follow the example of https://github.com/Microsoft/TypeScript-React-Starter.git.but … i failed to compiled it.and has submit issue
+#### [day 23]: learnt the typescript.first.i learned the concepts of typescript.then i try to code follow the example of https://github.com/Microsoft/TypeScript-React-Starter.git.but … i failed to compiled it.and has submit issue
 ______________________________________________________________________________________________________________________
-## [day 24]:i enrolled the lesson of "Build Front-End Web Applications from Scratch"  @Codecademy.which use react components. Today.i completed the basic of variables. Although i've already known the basics.i think lay a solid foundation will let me easier later.
+#### [day 24]:i enrolled the lesson of "Build Front-End Web Applications from Scratch"  @Codecademy.which use react components. Today.i completed the basic of variables. Although i've already known the basics.i think lay a solid foundation will let me easier later.
 ________________________________________________________________________________________________________________________
-## [day 25] the exercises of 'Create the Minesweeper Project' 
+#### [day 25] the exercises of 'Create the Minesweeper Project' 
+#### manually created an empty game board and a simulated game board.
+```js
+const blankLine = '  |   |  ';
+console.log('This is what an empty board would look like:');
+console.log(blankLine);
+console.log(blankLine);
+console.log(blankLine);
 
+const guessLine = '1 |   |  ';
+const bombLine = '  | B |  ';
+console.log('This is what a board with a guess and a bomb on it would look like: ');
+console.log(guessLine);
+console.log(bombLine);
+console.log(blankLine);
+```
