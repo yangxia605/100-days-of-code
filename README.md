@@ -1345,3 +1345,17 @@ console.log(guessLine);
 console.log(bombLine);
 console.log(blankLine);
 ```
+#### [day 26]use function and array to print player boards and bomb boards.
+```js
+const printBoard = board => {
+console.log('Current Board: ');
+console.log(board[0].join(' | '));
+console.log(board[1].join(' | '));
+console.log(board[2].join(' | '));
+};
+let board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']];
+printBoard(board);
+board[0][1]='1';
+board[1][0]='B';
+printBoard(board);
+```
