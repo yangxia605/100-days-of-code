@@ -1318,3 +1318,8 @@ strong {
           justify-content: center;
 }
 ```
+______________________________________________________________________________________________________________________
+## [day 20]:]i learned how to use the css to draw triangle.semicircle.circle .and also study the BFC.
+## [day 21]:moved the original css part over the "beta freecodecamp" @freeCodeCamp 
+## [day 22]:Basic Algorithm has completed.
+## [day 23]: learnt the typescript.first.i learned the concepts of typescript.then i try to code follow the example of https://github.com/Microsoft/TypeScript-React-Starter.git.but … i failed to compiled it.and has submit issue
