@@ -1329,7 +1329,8 @@ ________________________________________________________________________________
 ______________________________________________________________________________________________________________________
 #### [day 24]:i enrolled the lesson of "Build Front-End Web Applications from Scratch"  @Codecademy.which use react components. Today.i completed the basic of variables. Although i've already known the basics.i think lay a solid foundation will let me easier later.
 ________________________________________________________________________________________________________________________
-#### [day 25] the exercises of 'Create the Minesweeper Project' 
+#### [day 25]:the exercises of 'Create the Minesweeper Project' 
+__________________________________________________________________________________________________________________________
 #### manually created an empty game board and a simulated game board.
 ```js
 const blankLine = '  |   |  ';
@@ -1345,7 +1346,8 @@ console.log(guessLine);
 console.log(bombLine);
 console.log(blankLine);
 ```
-#### [day 26]use function and array to print player boards and bomb boards.
+_____________________________________________________________________________________________________________________
+#### [day 26]:use function and array to print player boards and bomb boards.
 ```js
 const printBoard = board => {
 console.log('Current Board: ');
@@ -1359,3 +1361,8 @@ board[0][1]='1';
 board[1][0]='B';
 printBoard(board);
 ```
+______________________________________________________________________________________________________________________
+#### [day 27]:use iterators and function to dynamically generate player board
+###### 1.Used nested arrays to manually create a game board
+###### 2.Wrote a function to neatly log the game board
+###### 3.Accessed the nested arrays to set a guess and a bomb on the game board
