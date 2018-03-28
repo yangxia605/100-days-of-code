@@ -1368,3 +1368,27 @@ ________________________________________________________________________________
 ###### 3.Accessed the nested arrays to set a guess and a bomb on the game board
 ______________________________________________________________________________________________________________________
 #### 【day 28】Do my codeCademy course.PS:next days code in my github project.but the record is on my twitter:https://twitter.com/mianmian605 and https://beta.freecodecamp.org/en/challenges/react-and-redux/map-dispatch-to-props
+
+_______________________________________________________________________________________________________________________
+#### Responsive Web Design Principles: Create a Media Query
+###### Media Queries are a new technique introduced in CSS3 that change the presentation of content based on different viewport sizes. The viewport is a user's visible area of a web page, and is different depending on the device used to access the site.
+###### an example of a media query that returns the content when the device's width is less than or equal to 100px:and the following media query returns the content when the device's height is more than or equal to 350px:
+```js
+@media (max-width: 100px) { /* CSS Rules */ }
+@media (min-height: 350px) { /* CSS Rules */ }
+```
+###### !!!Remember, the CSS inside the media query is applied only if the media type matches that of the device being used.
+####  Responsive Web Design Principles: Make an Image Responsive
+```js
+Making images responsive with CSS is actually very simple. Instead of applying an absolute width to an element:
+
+img { width: 720px; }
+
+You can use:
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+```js
