@@ -1367,4 +1367,4 @@ ________________________________________________________________________________
 ###### 2.Wrote a function to neatly log the game board
 ###### 3.Accessed the nested arrays to set a guess and a bomb on the game board
 ______________________________________________________________________________________________________________________
-#### 【day 28】Do my codeCademy course.PS:next days code in my github project.but the record is on my twitter:https://twitter.com/mianmian605
+#### 【day 28】Do my codeCademy course.PS:next days code in my github project.but the record is on my twitter:https://twitter.com/mianmian605 and https://beta.freecodecamp.org/en/challenges/react-and-redux/map-dispatch-to-props
