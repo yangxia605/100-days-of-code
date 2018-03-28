@@ -1379,7 +1379,7 @@ ________________________________________________________________________________
 ```
 ###### !!!Remember, the CSS inside the media query is applied only if the media type matches that of the device being used.
 ####  Responsive Web Design Principles: Make an Image Responsive
-```js
+```
 Making images responsive with CSS is actually very simple. Instead of applying an absolute width to an element:
 
 img { width: 720px; }
@@ -1391,4 +1391,26 @@ img {
   display: block;
   height: auto;
 }
-```js
+```
+_____________________________________________________________________________________________________________________
+
+##  flex 布局
+#### Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。任何一个容器都可以指定为 Flex 布局。
+#### 注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+#### 容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。
+#### 以下6个属性设置在容器上。
+```
+flex-direction
+flex-wrap
+flex-flow
+justify-content
+align-items
+align-content
+```
+###### flex-direction属性决定主轴的方向（即项目的排列方向）。
+```
+.box {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+```
+##### 参考链接：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
