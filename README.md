@@ -1414,3 +1414,42 @@ align-content
 }
 ```
 ##### 参考链接：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+
+—————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+## [day 28] 2019-01-14 YOU DON'T KNOW JS  5.5 模 块
+#### example_1: 普通版： foo()函数包括doSomething（）和 doAnother()两个函数
+```
+  function foo() {
+    var something = "cool";
+    var another = [1, 2, 3];
+    function doSomething() {
+      console.log(something);
+    }
+    function doAnother() {
+      console.log(another.join(" ! "));
+     }
+    }
+ ```
+ #### xample_2: 进阶版： 模块化
+ ```
+ function CoolModule() {
+  var something = "cool";
+  var another = [1, 2, 3];
+  function doSomething() {
+      console.log(something);
+    }
+    function doAnother() {
+      console.log(another.join(" ! "));
+     }
+     return {
+      doSomething: doSomething,
+      doAnother: doAnother
+     };
+    }
+    var foo = CoolModule();
+    foo.doSomething();//cool
+    foo.doAnother();//1 ! 2 ! 3!
+   ```
+   ###### 首先CoolModule()是一个函数，必须要通过调用它来创建一个模块实例，如果不执行外部函数，内部作用域和外包无法被创建。
+   ## 模块模式必须具备两个必要条件： 1.有外部的封闭函数，该函数必须至少被调用一次（每次调用都会创建一个新的模块实例） 2.封闭函数必须返回至少一个内部    函数，这样内部
+   ## 模块模式必须具备两个必要条件： 1.有外部的封闭函数，该函数必须至少被调用一次（每次调用都会创建一个新的模块实例） 2.封闭函数必须返回至少一个内部函数，这样函数内部函数才能在私有作用域中形成闭包，并且可以访问或者修改私有的状态。
